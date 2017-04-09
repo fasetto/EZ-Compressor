@@ -1,0 +1,4 @@
+E:\#dev\EZ-Compressor\src\EZCompressor.Core\bin\Debug\EZCompressor.Core.dll
+E:\#dev\EZ-Compressor\src\EZCompressor.Core\bin\Debug\EZCompressor.Core.pdb
+E:\#dev\EZ-Compressor\src\EZCompressor.Core\obj\Debug\EZCompressor.Core.dll
+E:\#dev\EZ-Compressor\src\EZCompressor.Core\obj\Debug\EZCompressor.Core.pdb
