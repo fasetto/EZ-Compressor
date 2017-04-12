@@ -1,0 +1,71 @@
+﻿<Page x:Class="EZCompressor.UI.Pages.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:EZCompressor.UI"
+      xmlns:model="clr-namespace:EZCompressor.Core.DataModels;assembly=EZCompressor.Core"
+      xmlns:viewmodel="clr-namespace:EZCompressor.UI.ViewModels;assembly=EZCompressor.UI"
+      xmlns:converters="clr-namespace:EZCompressor.UI.Converters"
+      xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+      mc:Ignorable="d" 
+      d:DataContext="{d:DesignInstance viewmodel:MainPageViewModel}"
+      d:DesignHeight="400" d:DesignWidth="400"
+      Title="MainPage">
+
+    <Page.Resources>
+        <converters:BooleanToColorConverter x:Key="BooleanToColorConverter"/>
+    </Page.Resources>
+    
+    <Border x:Name="MainContent" 
+            Margin="5"
+            Background="{StaticResource IyvoryBrush}"
+            AllowDrop="True"
+            CornerRadius="10">
+        
+        <StackPanel TextBlock.TextAlignment="Center" Margin="10">
+            
+            <TextBlock Style="{StaticResource HeaderText}" 
+                       FontSize="{StaticResource FontSizeRegular}"
+                       Text="Choose your compression"/>
+
+            <StackPanel Orientation="Horizontal" Margin="5 30 5 5" HorizontalAlignment="Center">
+                <Button Content="Lossy" Width="150"/>
+                <Button Content="Lossless" Width="150"/>
+            </StackPanel>
+
+            <ListView ItemsSource="{Binding Images}" Margin="5">
+                <ListView.ItemTemplate>
+                    <DataTemplate DataType="{x:Type model:ImageItem}">
+                            <StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <Border Width="10" 
+                                        Height="10" 
+                                        VerticalAlignment="Center"
+                                        CornerRadius="50"
+                                        Background="{Binding IsCompressed, Converter={StaticResource BooleanToColorConverter}}"/>
+                                    <TextBlock Margin="3 0 0 0">
+                                    <Run Text="{Binding Path}" 
+                                         FontFamily="{StaticResource LatoRegular}"
+                                         Foreground="{StaticResource ForegroundDarkBrush}"/>
+                                    </TextBlock>
+                                </StackPanel>
+                            </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="FontSize" Value="{StaticResource FontSizeSmall}" />
+                        <Setter Property="FontFamily" Value="{StaticResource LatoThin}"/>
+                        <Setter Property="Foreground" Value="{StaticResource ForegroundDarkBrush}" />
+                    </Style>
+                </ListView.ItemContainerStyle>
+            </ListView>
+
+        </StackPanel>
+    </Border>
+
+
+</Page>
+

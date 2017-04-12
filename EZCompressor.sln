@@ -5,7 +5,15 @@ VisualStudioVersion = 15.0.26403.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EZCompressor.Core", "src\EZCompressor.Core\EZCompressor.Core.csproj", "{D7CB8364-7007-453B-9B3F-96364E2DB2A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EZCompressor.Core.Test", "test\EZCompressor.Test\EZCompressor.Core.Test.csproj", "{2AB9A9B1-B6C1-40C8-9E09-C39D7A7EBE4D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EZCompressor.UI", "src\EZCompressor.GUI\EZCompressor.UI.csproj", "{4538613B-CF26-40AA-A354-0F2E5D56B982}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{447DF21A-B631-49D3-B052-E4F8CF33C7E7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{F6B7720E-8E5A-404D-8FDB-39A6677463C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EZCompressor.UI.Test", "test\EZCompressor.UI.Test\EZCompressor.UI.Test.csproj", "{353EECFA-89BD-4F13-AAAF-C9980B4B6197}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EZCompressor.Core.Test", "test\EZCompressor.Core.Test\EZCompressor.Core.Test.csproj", "{2AB9A9B1-B6C1-40C8-9E09-C39D7A7EBE4D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,6 +25,14 @@ Global
 		{D7CB8364-7007-453B-9B3F-96364E2DB2A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D7CB8364-7007-453B-9B3F-96364E2DB2A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D7CB8364-7007-453B-9B3F-96364E2DB2A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4538613B-CF26-40AA-A354-0F2E5D56B982}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4538613B-CF26-40AA-A354-0F2E5D56B982}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4538613B-CF26-40AA-A354-0F2E5D56B982}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4538613B-CF26-40AA-A354-0F2E5D56B982}.Release|Any CPU.Build.0 = Release|Any CPU
+		{353EECFA-89BD-4F13-AAAF-C9980B4B6197}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{353EECFA-89BD-4F13-AAAF-C9980B4B6197}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{353EECFA-89BD-4F13-AAAF-C9980B4B6197}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{353EECFA-89BD-4F13-AAAF-C9980B4B6197}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2AB9A9B1-B6C1-40C8-9E09-C39D7A7EBE4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2AB9A9B1-B6C1-40C8-9E09-C39D7A7EBE4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2AB9A9B1-B6C1-40C8-9E09-C39D7A7EBE4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -24,5 +40,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D7CB8364-7007-453B-9B3F-96364E2DB2A8} = {F6B7720E-8E5A-404D-8FDB-39A6677463C1}
+		{4538613B-CF26-40AA-A354-0F2E5D56B982} = {F6B7720E-8E5A-404D-8FDB-39A6677463C1}
+		{353EECFA-89BD-4F13-AAAF-C9980B4B6197} = {447DF21A-B631-49D3-B052-E4F8CF33C7E7}
+		{2AB9A9B1-B6C1-40C8-9E09-C39D7A7EBE4D} = {447DF21A-B631-49D3-B052-E4F8CF33C7E7}
 	EndGlobalSection
 EndGlobal
