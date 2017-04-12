@@ -21,24 +21,5 @@ namespace EZCompressor.Core.Test
 
         }
 
-        //[TestMethod]
-        //public void CanCompressImages()
-        //{
-        //    // Arrange
-        //    Compressor<JPEGCompressor> jpegCompressor = new Compressor<JPEGCompressor>();
-        //    jpegCompressor.CompressionMode = CompressionMode.Lossy;
-        //    jpegCompressor.OutputDirectory = @"OutDir";
-        //    jpegCompressor.Quality = 80;
-
-        //    // Act
-        //    CompressionResult result = jpegCompressor.CompressAsync(new ImageItem()
-        //    {
-        //        Path = jpegCompressor.OutputDirectory + "\\street.jpg"
-        //    }).Result;
-
-        //    // Assert
-        //    Assert.IsTrue(result.CompressedFile.Length > 0);
-        //}
-
     }
 }
