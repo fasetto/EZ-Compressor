@@ -48,6 +48,8 @@
     <Compile Include="Compression\Compressor.cs" />
     <Compile Include="Compression\CompressorBase.cs" />
     <Compile Include="Compression\JPEGCompressor.cs" />
+    <Compile Include="Compression\PNGCompressor.cs" />
+    <Compile Include="DataModels\CompressionStatus.cs" />
     <Compile Include="DataModels\ImageItem.cs" />
     <Compile Include="Helpers\WindowResizer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

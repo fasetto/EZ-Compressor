@@ -55,7 +55,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\EZCompressor.GUI\EZCompressor.UI.csproj">
+    <ProjectReference Include="..\..\src\EZCompressor.UI\EZCompressor.UI.csproj">
       <Project>{4538613b-cf26-40aa-a354-0f2e5d56b982}</Project>
       <Name>EZCompressor.UI</Name>
     </ProjectReference>

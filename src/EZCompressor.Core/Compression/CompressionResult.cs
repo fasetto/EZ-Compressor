@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EZCompressor.Core.DataModels;
+using System;
 using System.IO;
 
 namespace EZCompressor.Core.Compression
@@ -23,14 +24,14 @@ namespace EZCompressor.Core.Compression
                 CompressedFileSize = result.Length;
             }
 
-            Processed = true;
+            Status = CompressionStatus.Finished;
         }
 
         public long OriginalFileSize { get; set; }
         public string OriginalFile { get; set; }
         public long CompressedFileSize { get; set; }
         public string CompressedFile { get; set; }
-        public bool Processed { get; set; }
+        public virtual CompressionStatus Status { get; set; }
         public TimeSpan Elapsed { get; set; }
         public double TotalSeconds => Math.Round(Elapsed.TotalSeconds, 2);
         public long Saving => Math.Max(OriginalFileSize - CompressedFileSize, 0);
